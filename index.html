@@ -1,84 +1,176 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Scale Image</title>
-        <style>
-            .scale-down {
-                width: 15%; /* Adjust the percentage as needed */
-                height: auto; /* Maintain the aspect ratio */
-            }
-        </style>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Elie Bermot — Quantum Enablement and Adoption Manager at Pasqal, PhD in quantum optimization. Research, publications, talks and experience.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>Elie Bermot | Quantum Computing</title>
+  <style>
+    :root { color-scheme: light; --ink:#19283c; --muted:#56667a; --accent:#155e75; --accent-soft:#e7f3f5; --border:#dfe7ec; --bg:#f8fafc; --white:#fff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    a:hover { color:#0c4556; }
+    a:focus-visible { outline:3px solid #67b6c8; outline-offset:3px; border-radius:3px; }
+    .container { width:min(100% - 40px, 920px); margin-inline:auto; }
+    .site-header { background:var(--white); border-bottom:1px solid var(--border); }
+    .nav { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; justify-content:space-between; padding:17px 0; }
+    .brand { font-size:1.05rem; font-weight:750; color:var(--ink); text-decoration:none; }
+    .nav-links { display:flex; flex-wrap:wrap; gap:9px 19px; }
+    .nav-links a { font-size:.9rem; font-weight:600; color:var(--muted); text-decoration:none; }
+    .nav-links a:hover { color:var(--accent); }
+    main { padding-bottom:60px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) 190px; gap:36px; align-items:center; padding:54px 0 40px; }
+    .eyebrow { margin:0 0 6px; font-size:.82rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--accent); }
+    h1 { margin:0 0 13px; font-size:clamp(2.3rem,6vw,3.5rem); line-height:1.14; letter-spacing:-.045em; }
+    .intro { max-width:650px; margin:0 0 15px; font-size:1.075rem; }
+    .research { color:var(--muted); margin:0 0 19px; }
+    .contact { display:flex; flex-wrap:wrap; gap:10px; }
+    .pill { display:inline-flex; padding:7px 14px; border:1px solid #b9d7df; border-radius:999px; background:var(--accent-soft); text-decoration:none; font-size:.9rem; font-weight:650; }
+    .portrait { width:190px; height:190px; display:block; object-fit:cover; border-radius:18px; box-shadow:0 8px 24px #19283c17; background:#e7eef1; }
+    section { padding:27px 0; border-top:1px solid var(--border); }
+    h2 { margin:0 0 19px; font-size:1.5rem; letter-spacing:-.025em; }
+    h3 { margin:0 0 4px; font-size:1.04rem; line-height:1.42; }
+    .entries { list-style:none; padding:0; margin:0; display:grid; gap:21px; }
+    .entry { padding:0 0 19px; border-bottom:1px solid #e8edf0; }
+    .entry:last-child { padding-bottom:0; border-bottom:0; }
+    .meta { color:var(--muted); font-size:.9rem; margin:3px 0 8px; }
+    .entry p { margin:7px 0; }
+    .links { margin:7px 0 0; font-size:.92rem; font-weight:650; }
+    .details { margin:8px 0 0; padding-left:21px; }
+    .details li { margin:4px 0; }
+    footer { padding:24px 0 36px; border-top:1px solid var(--border); color:var(--muted); font-size:.88rem; }
+    @media (max-width:600px) { .container { width:min(100% - 30px,920px); } .hero { grid-template-columns:1fr; gap:22px; padding-top:35px; } .portrait { grid-row:1; width:130px; height:130px; border-radius:15px; } .nav { align-items:flex-start; } }
+    @media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} }
+  </style>
+</head>
 <body>
-<h1>Elie Bermot</h1>
-<p>
-    Hello, my name is Elie Bermot and I am a PhD student at Pasqal and at IRIF in Paris since August 2023.<br/>
-    I am interested in Quantum Algorithms, Quantum Optimization, Quantum Adiabatic Algorithms and Quantum Simulation.<br/>
-    Mail: elie.bermot at pasqal dot com  and  elie.bermot at irif dot fr<br/>  
-</p>
-<img src="ElieB.jpg" alt="???" class="scale-down">
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#top">Elie Bermot</a>
+      <div class="nav-links">
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </div>
+    </nav>
+  </header>
 
-<h2>Talks</h2>
-    <ul>
-        <li>Exploring Quantum Annealing and Tunneling: Harnessing their Potential for Independent Set Sampling. (May 8th, 2024)<br/>
-            Talk at the 2024 <a href="https://uwaterloo.ca/institute-for-quantum-computing/iqc-pcqt-workshop">IQC-PCQT workshop</a>.<br/>
-            <a href="./IQC-PCQT2024.pdf" target="blank">[slides]</a>
+  <main class="container" id="top">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Quantum computing · Research &amp; adoption</p>
+        <h1>Elie Bermot</h1>
+        <p class="intro">I am a <strong>Quantum Enablement and Adoption Manager at <a href="https://www.pasqal.com/">Pasqal</a></strong>, where I help users make the most of neutral-atom quantum computing technology.</p>
+        <p class="intro">I completed my PhD in October 2026, jointly at <a href="https://www.irif.fr/">IRIF</a> (Université Paris Cité) and Pasqal. My research focused on quantum algorithms for combinatorial optimization, particularly quantum annealing and tunneling.</p>
+        <p class="research"><strong>Interests:</strong> Quantum algorithms, quantum optimization, adiabatic quantum computing, and quantum simulation.</p>
+        <div class="contact"><a class="pill" href="mailto:elie.bermot@pasqal.com">Email me</a><a class="pill" href="./PhD_manuscript_BERMOT_VF.pdf" target="_blank" rel="noopener noreferrer">PhD thesis ↗</a></div>
+      </div>
+      <img class="portrait" src="ElieB.jpg" alt="Portrait of Elie Bermot" width="190" height="190">
+    </div>
+
+    <section id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <ol class="entries">
+        <li class="entry">
+          <h3>Analog quantum algorithms for combinatorial optimization on neutral-atom devices: from graph embeddings to tunneling in quantum annealing</h3>
+          <p class="meta">Elie Bermot · PhD thesis · 2026</p>
+          <p class="links"><a href="./PhD_manuscript_BERMOT_VF.pdf" target="_blank" rel="noopener noreferrer">Manuscript (PDF) ↗</a></p>
         </li>
-    </ul>
-<h2>Publications</h2>
-    <ul>
-         <li>
-            Arthur Braida, Elie Bermot, Simon Apers. <i>Log-concavity and tunneling: adiabatic quantum optimization for convex functions (with a spike)</i><br/>
-            <a href="https://arxiv.org/abs/2606.23614">[arXiv]</a><br/>
-        </li><br/>
-         <li>
-            Elie Bermot, Lucia Valor, Wesley Coelho, Louis-Paul Henry and Natalie Pearson. <i>Rydberg blockade mechanism through the lens of graph theory: characterization and applications.</i><br/>
-            <a href="https://arxiv.org/abs/2506.13228">[arXiv]</a><br/>
-        </li><br/>
-        <li>
-            Elie Bermot, Christa Zoufal, Julian Schuhmacher, Michele Grossi, Francesco Tacchino, Sofia Vallecorsa, and Ivano Tavernelli. <i>Quantum Generative Adversarial Networks For Anomaly Detection In High Energy Physics.</i><br/>
-            <a href="https://arxiv.org/abs/2304.14439">[arXiv]</a><br/>
-        </li><br/>
-    </ul>
-
-<h2>Experience</h2>
-    <ul>
-        <li>
-            R&D Quantum Application Engineer at <a href="https://www.pasqal.com/"> Pasqal </a> in Palaiseau, France (April 2023 - present)<br/> 
-            PhD focused on quantum optimization for combinatorial problems, mostly using quantum annealing procedures.
-        </li><br/>
-        <li>
-            Quantum Community team intern  at <a href="https://research.ibm.com/labs/zurich"> IBM Research </a> in Zurich, Switzerland (September 2022-March 2023) <br/>
-            Team that focuses on workforce development, advocacy, and outreach activities in Europe and Africa for IBM Quantum. <br/>
-        </li><br/>
-    </ul>
-<h2>Education</h2>
-    <ul>
-        <li>
-            PhD in Quantum Optimization for Combinatorial problems at Institut de Recherche en Informatique Fondamentale (IRIF) and Pasqal in Paris, France. (August 2023 - present)<br/>
-            Department: <a href="https://www.irif.fr/en/equipes/algocomp/index">Algorithmes et complexité</a>.<br/>
-            Supervisors: <a href="https://simonapers.github.io/">Simon Apers</a> , <a href="https://www.irif.fr/~magniez/">Frédéric Magniez</a> (IRIF) and <a href=" https://scholar.google.com/citations?user=riQQjssAAAAJ&hl=en">Louis-Paul Henry</a> .
-        </li><br/>
-        <li>
-            Master of Quantum Engineering at <a href="https://ethz.ch/en.html">ETH Zurich</a> in Zurich, Switzerland. (September 2020 - december 2022)<br/>
-            Master thesis: Quantum Generative Adversarial Networks For Anomaly Detection In High Energy Physics.
-                <a href="./master_thesis.pdf" target="blank">[pdf]</a><br/>
-            Supervisors: <a href="https://scholar.google.ch/citations?hl=de&user=4l3kCFEAAAAJ">Christa Zoufal</a>, <a href="https://scholar.google.ch/citations?hl=de&user=d5P8UwsAAAAJ">Ivano Tavernelli</a> and <a href="https://scholar.google.ch/citations?user=OEBtlWgAAAAJ&hl=de">Renato Renner</a>.
-        </li><br/>
-<li>
-            Bachelor of Science and Master in Physics at <a href="https://www.polytechnique.edu/">Ecole polytechnique</a> in Palaiseau, France. (September 2017 - August 2021)<br/>
-            Bachelor thesis: Fermionic Hubbard model with Diagrammatic Monte Carlo 
-                <a href="./bachelor_thesis.pdf" target="blank">[pdf]</a><br/>
-            Supervisors: <a href="https://scholar.google.ch/citations?hl=de&user=Tr6GbD8AAAAJ">Fedor Simkovic</a>,  <a href=https://scholar.google.ch/citations?hl=de&user=aJBvSKAAAAAJ">Thomas Schafer </a>  and <a href="https://scholar.google.ch/citations?hl=de&user=BlwuRr0AAAAJ">Michel Ferrero</a>.
-        </li><br/>
-
-        <li>
-            Classes preparatoires aux grandes ecoles at Lycee Louis le Grand in Paris, France (September 2014-August 2017) <br/>
-            Post-secondary preparatory classes in Advanced mathematics, Physics, Engineering Sciences preparing for international competitive entrance examinations to the French “Grandes Ecoles”
-        </li><br/>
+        <li class="entry">
+          <h3>Log-concavity and tunneling: adiabatic quantum optimization for convex functions (with a spike)</h3>
+          <p class="meta">Arthur Braida, Elie Bermot, Simon Apers · 2026</p>
+          <p class="links"><a href="https://arxiv.org/abs/2606.23614" target="_blank" rel="noopener noreferrer">arXiv ↗</a></p>
         </li>
-    </ul>
+        <li class="entry">
+          <h3>Rydberg blockade mechanism through the lens of graph theory: characterization and applications</h3>
+          <p class="meta">Elie Bermot, Lucia Valor, Wesley Coelho, Louis-Paul Henry, Natalie Pearson · 2025</p>
+          <p class="links"><a href="https://arxiv.org/abs/2506.13228" target="_blank" rel="noopener noreferrer">arXiv ↗</a></p>
+        </li>
+        <li class="entry">
+          <h3>Quantum Generative Adversarial Networks for Anomaly Detection in High Energy Physics</h3>
+          <p class="meta">Elie Bermot, Christa Zoufal, Julian Schuhmacher, Michele Grossi, Francesco Tacchino, Sofia Vallecorsa, Ivano Tavernelli · 2023</p>
+          <p class="links"><a href="https://arxiv.org/abs/2304.14439" target="_blank" rel="noopener noreferrer">arXiv ↗</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="talks" aria-labelledby="talks-title">
+      <h2 id="talks-title">Talks</h2>
+      <ul class="entries">
+        <li class="entry">
+          <h3>Analog quantum algorithms for combinatorial optimization on neutral-atom devices: from graph embeddings to tunneling in quantum annealing</h3>
+          <p class="meta">PhD defense · October 12, 2026</p>
+          <p class="links"><a href="./PhD Defense - BERMOT - slides.pdf" target="_blank" rel="noopener noreferrer">Slides (PDF) ↗</a></p>
+        </li>
+        <li class="entry">
+          <h3>Exploring Quantum Annealing and Tunneling: Harnessing Their Potential for Independent Set Sampling</h3>
+          <p class="meta"><a href="https://uwaterloo.ca/institute-for-quantum-computing/iqc-pcqt-workshop">IQC–PCQT Workshop</a> · May 8, 2024</p>
+          <p class="links"><a href="./IQC-PCQT2024.pdf" target="_blank" rel="noopener noreferrer">Slides (PDF) ↗</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <ul class="entries">
+        <li class="entry">
+          <h3>Quantum Enablement and Adoption Manager · <a href="https://www.pasqal.com/">Pasqal</a></h3>
+          <p class="meta">Palaiseau, France · November 2026 – Present</p>
+          <p>Helping users adopt neutral-atom quantum computing by connecting advanced quantum hardware with real-world needs.</p>
+          <ul class="details">
+            <li>Design and deliver technical training, workshops, and hackathons.</li>
+            <li>Support quantum algorithm development, execution, and result interpretation.</li>
+            <li>Develop training programs and professional services with Product and Software teams.</li>
+            <li>Translate user feedback into actionable product improvements.</li>
+            <li>Strengthen user engagement and provide advanced technical support.</li>
+          </ul>
+        </li>
+        <li class="entry">
+          <h3>R&amp;D Quantum Application Engineer · <a href="https://www.pasqal.com/">Pasqal</a></h3>
+          <p class="meta">Palaiseau, France · April 2023 – October 2026</p>
+          <p>Conducted industrial PhD research on quantum approaches to combinatorial optimization, with an emphasis on quantum annealing and neutral-atom platforms.</p>
+        </li>
+        <li class="entry">
+          <h3>Quantum Community Team Intern · <a href="https://research.ibm.com/labs/zurich">IBM Research</a></h3>
+          <p class="meta">Zurich, Switzerland · September 2022 – March 2023</p>
+          <p>Contributed to quantum workforce development, advocacy, and outreach initiatives across Europe and Africa.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <ul class="entries">
+        <li class="entry">
+          <h3>PhD in Quantum Optimization · IRIF, Université Paris Cité &amp; Pasqal</h3>
+          <p class="meta">Paris, France · August 2023 – October 2026</p>
+          <p><strong>Research group:</strong> <a href="https://www.irif.fr/en/equipes/algocomp/index">Algorithms and Complexity</a></p>
+          <p><strong>Supervisors:</strong> <a href="https://simonapers.github.io/">Simon Apers</a>, <a href="https://www.irif.fr/~magniez/">Frédéric Magniez</a>, and <a href="https://scholar.google.com/citations?user=riQQjssAAAAJ&amp;hl=en">Louis-Paul Henry</a>.</p>
+        </li>
+        <li class="entry">
+          <h3>MSc in Quantum Engineering · <a href="https://ethz.ch/en.html">ETH Zurich</a></h3>
+          <p class="meta">Zurich, Switzerland · September 2020 – December 2022</p>
+          <p><strong>Master's thesis:</strong> Quantum Generative Adversarial Networks for Anomaly Detection in High Energy Physics. <a href="./master_thesis.pdf" target="_blank" rel="noopener noreferrer">PDF ↗</a></p>
+          <p><strong>Supervisors:</strong> <a href="https://scholar.google.ch/citations?hl=de&amp;user=4l3kCFEAAAAJ">Christa Zoufal</a>, <a href="https://scholar.google.ch/citations?hl=de&amp;user=d5P8UwsAAAAJ">Ivano Tavernelli</a>, and <a href="https://scholar.google.ch/citations?user=OEBtlWgAAAAJ&amp;hl=de">Renato Renner</a>.</p>
+        </li>
+        <li class="entry">
+          <h3>BSc and Master's-level studies in Physics · <a href="https://www.polytechnique.edu/">École Polytechnique</a></h3>
+          <p class="meta">Palaiseau, France · September 2017 – August 2021</p>
+          <p><strong>Bachelor's thesis:</strong> Fermionic Hubbard Model with Diagrammatic Monte Carlo. <a href="./bachelor_thesis.pdf" target="_blank" rel="noopener noreferrer">PDF ↗</a></p>
+          <p><strong>Supervisors:</strong> <a href="https://scholar.google.ch/citations?hl=de&amp;user=Tr6GbD8AAAAJ">Fedor Simkovic</a>, <a href="https://scholar.google.ch/citations?hl=de&amp;user=aJBvSKAAAAAJ">Thomas Schäfer</a>, and <a href="https://scholar.google.ch/citations?hl=de&amp;user=BlwuRr0AAAAJ">Michel Ferrero</a>.</p>
+        </li>
+        <li class="entry">
+          <h3>Classes préparatoires aux grandes écoles · Lycée Louis-le-Grand</h3>
+          <p class="meta">Paris, France · September 2014 – August 2017</p>
+          <p>Intensive post-secondary studies in mathematics, physics, and engineering sciences in preparation for competitive entrance examinations to French grandes écoles.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 Elie Bermot · <a href="mailto:elie.bermot@pasqal.com">Contact</a></div></footer>
 </body>
 </html>
